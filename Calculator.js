@@ -1,4 +1,12 @@
+const buttons = document.querySelectorAll('button')
+const displayElement = document.querySelector('input')
+const calculator = new Calculator(displayElement)
 
+
+/*
+displayContent는 input화면에 나타나는 내용
+operatorCheck 와 equalCheck를 통해 연산자와 계산 결과 확인
+*/
 class Calculator{
   constructor(displayElement) {
     this.displayElement = displayElement
@@ -37,9 +45,6 @@ class Calculator{
     this.equalsCheck = true
   }
 }
-const buttons = document.querySelectorAll('button')
-const displayElement = document.querySelector('input')
-const calculator = new Calculator(displayElement)
 
 buttons.forEach(button => {
   button.addEventListener('click', () => {
